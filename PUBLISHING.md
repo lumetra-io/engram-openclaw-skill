@@ -13,9 +13,11 @@ Until the skill is approved on ClawHub, `openclaw skill add engram` does **not**
 ```bash
 # From a clean checkout of engram-openclaw-skill
 clawhub login                              # opens browser, GitHub OAuth
-clawhub skill validate skills/engram       # local lint + frontmatter check
-clawhub skill publish skills/engram        # submits for review
+clawhub whoami                             # confirm the right identity is active
+clawhub skill publish skills/engram        # submits for review (server-side validates frontmatter)
 ```
+
+There is no local `clawhub skill validate` subcommand as of the current CLI — frontmatter is validated server-side when you publish. If the publish is rejected, the error message tells you what to fix; iterate and re-run `clawhub skill publish`.
 
 The slug ClawHub assigns is `<author>/<name>` based on the frontmatter `name:` + your account namespace. We want `lumetra/engram` so that the install command is:
 
