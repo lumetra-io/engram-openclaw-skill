@@ -9,9 +9,9 @@ Wires OpenClaw into the hosted Engram MCP server. Your agent gets `store_memory`
 ### From ClawHub (recommended once published)
 
 ```bash
-openclaw skill add engram-memory
+openclaw skill add lumetra-engram
 # or, equivalent:
-clawhub install engram-memory
+clawhub install lumetra-engram
 ```
 
 OpenClaw will prompt for `ENGRAM_API_KEY` once and store it in its secret store.
@@ -24,13 +24,13 @@ While the skill is pending publication on [ClawHub](https://github.com/openclaw/
 # From your project root, into your OpenClaw skills directory
 mkdir -p .openclaw/skills
 curl -fsSL https://codeload.github.com/lumetra-io/engram-openclaw-skill/tar.gz/refs/heads/main \
-  | tar -xz --strip-components=2 -C .openclaw/skills engram-openclaw-skill-main/skills/engram-memory
+  | tar -xz --strip-components=2 -C .openclaw/skills engram-openclaw-skill-main/skills/lumetra-engram
 
 # Set your API key (OpenClaw will read it on first invocation)
 export ENGRAM_API_KEY="eng_live_..."
 ```
 
-Or `git clone` this repo and copy `skills/engram-memory/` into your OpenClaw `skills/` directory manually.
+Or `git clone` this repo and copy `skills/lumetra-engram/` into your OpenClaw `skills/` directory manually.
 
 ## What you need before installing
 
@@ -53,7 +53,7 @@ Same surface as the [Claude Code plugin](https://github.com/lumetra-io/engram-cl
 ## Repository layout
 
 ```
-skills/engram-memory/
+skills/lumetra-engram/
 └── SKILL.md   # Frontmatter declares the MCP server + ENGRAM_API_KEY env var; body is the agent prompt
 ```
 
@@ -64,8 +64,8 @@ The skill is **MCP-backed** — it doesn't ship any binaries. It wires OpenClaw 
 This repo is the source of truth for the skill. To publish it on [ClawHub](https://github.com/openclaw/clawhub):
 
 1. Push this repo to `github.com/lumetra-io/engram-openclaw-skill`.
-2. From a checkout, run `clawhub skill publish skills/engram-memory --version 0.1.0` (requires a ClawHub account linked via GitHub OAuth).
-3. Wait for moderator approval. After approval, `openclaw skill add engram-memory` (or `clawhub install engram-memory`) is live for everyone.
+2. From a checkout, run `clawhub skill publish skills/lumetra-engram --version 0.1.0` (requires a ClawHub account linked via GitHub OAuth).
+3. Wait for moderator approval. After approval, `openclaw skill add lumetra-engram` (or `clawhub install lumetra-engram`) is live for everyone.
 
 See [ClawHub CONTRIBUTING](https://github.com/openclaw/clawhub/blob/main/CONTRIBUTING.md) for the full publishing flow.
 

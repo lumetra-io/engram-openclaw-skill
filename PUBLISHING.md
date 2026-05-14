@@ -14,17 +14,17 @@ Until the skill is approved on ClawHub, `openclaw skill add engram` does **not**
 # From a clean checkout of engram-openclaw-skill
 clawhub login                              # opens browser, GitHub OAuth
 clawhub whoami                             # confirm the right identity is active
-clawhub skill publish skills/engram-memory --version 0.1.0 --slug engram-memory        # submits for review (server-side validates frontmatter)
+clawhub skill publish skills/lumetra-engram --version 0.1.0 --slug lumetra-engram        # submits for review (server-side validates frontmatter)
 ```
 
 There is no local `clawhub skill validate` subcommand as of the current CLI — frontmatter is validated server-side when you publish. If the publish is rejected, the error message tells you what to fix; iterate and re-run `clawhub skill publish`.
 
-ClawHub slugs are **globally unique** (not namespaced under the publisher), and `engram` was already taken by another publisher. The skill is therefore published as `engram-memory`:
+ClawHub slugs are **globally unique** (not namespaced under the publisher), and `engram` was already taken by another publisher. The skill is therefore published as `lumetra-engram`:
 
 ```bash
-openclaw skill add engram-memory
+openclaw skill add lumetra-engram
 # or
-clawhub install engram-memory
+clawhub install lumetra-engram
 ```
 
 ## After approval

@@ -1,5 +1,5 @@
 ---
-name: engram-memory
+name: lumetra-engram
 description: Persistent, explainable memory for your OpenClaw agent — store facts and recall them later via the hosted Engram MCP server (by Lumetra).
 user-invocable: true
 metadata:
