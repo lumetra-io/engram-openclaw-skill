@@ -9,9 +9,9 @@ Wires OpenClaw into the hosted Engram MCP server. Your agent gets `store_memory`
 ### From ClawHub (recommended once published)
 
 ```bash
-clawhub install lumetra/engram
+openclaw skill add engram-memory
 # or, equivalent:
-openclaw skill add engram
+clawhub install engram-memory
 ```
 
 OpenClaw will prompt for `ENGRAM_API_KEY` once and store it in its secret store.

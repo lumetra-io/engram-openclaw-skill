@@ -19,12 +19,12 @@ clawhub skill publish skills/engram        # submits for review (server-side val
 
 There is no local `clawhub skill validate` subcommand as of the current CLI — frontmatter is validated server-side when you publish. If the publish is rejected, the error message tells you what to fix; iterate and re-run `clawhub skill publish`.
 
-The slug ClawHub assigns is `<author>/<name>` based on the frontmatter `name:` + your account namespace. We want `lumetra/engram` so that the install command is:
+ClawHub slugs are **globally unique** (not namespaced under the publisher), and `engram` was already taken by another publisher. The skill is therefore published as `engram-memory`:
 
 ```bash
-clawhub install lumetra/engram
-# or, the older alias
-openclaw skill add engram      # short form resolves to lumetra/engram once we own the namespace
+openclaw skill add engram-memory
+# or
+clawhub install engram-memory
 ```
 
 ## After approval
